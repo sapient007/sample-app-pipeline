@@ -1,7 +1,11 @@
 ---
 platform: linux
 
-image: docker:///golang#1.4.2-wheezy
+# image: docker:///golang#1.4.2-wheezy
+image_resource:
+  type: docker-image
+  source:
+    repository: golang
 
 inputs:
 - name: concourse-demo-app-master
